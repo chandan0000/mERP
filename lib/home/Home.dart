@@ -11,10 +11,10 @@ class Home extends StatelessWidget {
       body:  Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(0,123,0,78),
+            padding: const EdgeInsets.fromLTRB(0,73,0,60),
             child: Container(
-              child: Image.asset('images/Home.png',
-                height: 250,
+              child: Image.asset('images/Ext.png',
+                height: 310,
               ),
             ),
           ),
@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.only(left: 18, right:18, top: 10, bottom: 10),
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.blue.shade400,
+                  color: Colors.indigo.shade600,
                   borderRadius: BorderRadius.all(Radius.circular(10.0))),
               width: 400,
               // color: Colors.blue,
@@ -49,10 +49,10 @@ class Home extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 18, right:18, top: 10, bottom: 90),
+            padding: const EdgeInsets.fromLTRB(18, 18, 10, 90),
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.blue.shade400,
+                  color: Colors.indigo.shade600,
                   borderRadius: BorderRadius.all(Radius.circular(10.0))),
               width: 400,
               /*color: Colors.blue,*/

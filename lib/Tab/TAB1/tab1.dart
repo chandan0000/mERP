@@ -1,29 +1,35 @@
 import 'package:flutter/material.dart';
 
 
-import 'REf.dart';
-import 'new.dart';
-import 'TRf.dart';
+
+import '../REf.dart';
+import '../TRf.dart';
+import 'image.dart';
+import 'tab2.dart';
+import 'tab3.dart';
 
 
 
 
-class page extends StatelessWidget {
+
+
+
+class Two extends StatelessWidget {
 
   List<Widget> containers = [
-    View(),
 
-    REf(),
+    Mage(),
 
-    REf(),
+    Mage1(),
 
-    Trf(),
+    Mage2(),
+
   ];
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: Text('Quotations'),
@@ -77,9 +83,9 @@ class page extends StatelessWidget {
                                 color: Colors.black,
                               ),),
                               Text("More", style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                ),),
+                                fontSize: 16,
+                                color: Colors.black,
+                              ),),
                               Text("Attachment(s)", style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black,
@@ -106,19 +112,21 @@ class page extends StatelessWidget {
           ],
           bottom: TabBar(
             tabs: <Widget>[
-
               Tab(
                 text: 'MAIN',
               ),
               Tab(
-                text: 'ORDER\nLINES',
+                text: 'CONTACTS & ADDRESSES',
               ),
               Tab(
-                text: 'OPTIONAL\nPRODUCTS',
+                text: 'SALES & PURCHASE',
               ),
-              Tab(
-                text: 'OTHER\nINFO',
-              ),
+              // Tab(
+              //   text: 'INVOICING',
+              // ),
+              // Tab(
+              //   text: 'INTERNAL NOTES',
+              // ),
 
             ],
           ),

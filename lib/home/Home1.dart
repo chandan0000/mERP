@@ -54,12 +54,25 @@ class Free extends StatelessWidget {
                   ),
                   Column(
                     children: <Widget>[
-                      Container(
-                          padding: EdgeInsets.only(right:193),
-                          child: Text('Marc Demo')),
+                      Padding(
+                        padding: const EdgeInsets.only(top:8.0),
+                        child: Container(
+                            padding: EdgeInsets.only(right:193),
+                            child: Text('Marc Demo',
+                              style: TextStyle(
+                                  color: Colors.white,
+                              ),
+                            )),
+                      ),
                       Row(
                         children: [
-                          Text('https://demo.merpapp.com'),
+                          Padding(
+                            padding: const EdgeInsets.only(top:8.0),
+                            child: Text('https://demo.merpapp.com',
+                              style: TextStyle(
+                                color: Colors.white,
+                            ),),
+                          ),
                           // Container(
                           //   padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
                           //   // padding: EdgeInsets.all(20.0),
@@ -75,7 +88,7 @@ class Free extends StatelessWidget {
                 ],
               ),
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.indigo[600],
               ),
             ),
 
@@ -318,7 +331,7 @@ class Free extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0)),
                       child: Image.asset(
-                        'images/Home.png',
+                        'images/Ext.png',
                         width: 150,
                         height: 150,
                       ),
@@ -343,7 +356,7 @@ class Free extends StatelessWidget {
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0)),
-                      child: Image.asset('images/Home.png',
+                      child: Image.asset('images/Ext.png',
                         width: 150,
                         height: 150,
                       ),
@@ -374,7 +387,7 @@ class Free extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0)),
                       child: Image.asset(
-                        'images/Home.png',
+                        'images/Ext.png',
                         width: 150,
                         height: 150,
                       ),
@@ -400,7 +413,7 @@ class Free extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0)),
                       child: Image.asset(
-                        'images/Home.png',
+                        'images/Ext.png',
                         width: 150,
                         height: 150,
                       ),
@@ -431,7 +444,7 @@ class Free extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0)),
                       child: Image.asset(
-                        'images/Home.png',
+                        'images/Ext.png',
                         width: 150,
                         height: 150,
                       ),
@@ -457,10 +470,10 @@ class Free extends StatelessWidget {
 
   {
     Fluttertoast.showToast(msg: "hello world", fontSize: 20,
+      toastLength: Toast.LENGTH_LONG,
       gravity: ToastGravity.TOP,
       backgroundColor: Colors.orangeAccent,
       textColor: Colors.white,
-      toastLength: Toast.LENGTH_LONG,
     );
   }
 
@@ -478,74 +491,3 @@ class Free extends StatelessWidget {
 
 }
 
-// class tost extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("tost"),
-//       ),
-//       body: RaisedButton(
-//         child: Text("tost"),
-//         onPressed: start,
-//       ),
-//     );
-//   }
-//
-//   void start()
-//   {
-//     Fluttertoast.showToast(msg: "hello world", fontSize: 20,
-//     gravity: ToastGravity.TOP_LEFT,
-//       backgroundColor: Colors.orangeAccent,
-//       textColor: Colors.white,
-//       toastLength: Toast.LENGTH_LONG,
-//     );
-//   }
-//
-// }
-//
-//
-//
-// class ToastExample extends StatefulWidget {
-//   @override
-//   _ToastExampleState createState() {
-//     return _ToastExampleState();
-//   }
-// }
-//
-// class _ToastExampleState extends State {
-//   void showToast() {
-//     Fluttertoast.showToast(
-//         msg: 'Some text',
-//         toastLength: Toast.LENGTH_SHORT,
-//         gravity: ToastGravity.BOTTOM_RIGHT,
-//         // timeInSecForIos: 1,
-//         backgroundColor: Colors.red,
-//         textColor: Colors.white
-//     );
-//   }
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Toast Tutorial',
-//       home: Scaffold(
-//           appBar: AppBar(
-//             title: Text('Toast Tutorial'),
-//           ),
-//           body: Padding(
-//             padding: EdgeInsets.all(15.0),
-//             child: Center(
-//               child: RaisedButton(
-//                 child: Text('Press to show'),
-//                 onPressed: showToast,
-//               ),
-//             ),
-//           )
-//       ),
-//     );
-//   }
-// }
-//
-//
-// void main() => runApp(ToastExample());

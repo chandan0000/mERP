@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:merp/Tab/tab.dart';
+
 
 import 'sale1.dart';
 
@@ -13,6 +15,7 @@ class Sales extends StatelessWidget {
       ),
       body: ListView(
         children: [
+
           // Padding(
           //   padding: const EdgeInsets.fromLTRB(0,0,0,10),
           //   child: Container(
@@ -96,6 +99,7 @@ class Sales extends StatelessWidget {
           //     ),
           //   ),
           // ),
+
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Card(
@@ -111,6 +115,7 @@ class Sales extends StatelessWidget {
                   children: [
                     Text("Orders",style: TextStyle(
                       fontSize: 22,
+
                       fontWeight: FontWeight.w500,
                     ),),
                     Column(
@@ -118,10 +123,11 @@ class Sales extends StatelessWidget {
                       children: [
                         FlatButton(
                           onPressed: (){
-                            Navigator.of(context).push(MaterialPageRoute(builder: (_) => quit()));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (_) => page()));
                           },
                           child: Text("Quotations",style: TextStyle(
                             fontSize: 18,
+                            color: Colors.grey,
                             // fontWeight: FontWeight.w400,
                           ),),
 
@@ -132,6 +138,7 @@ class Sales extends StatelessWidget {
                           },
                           child: Text("Orders",style: TextStyle(
                             fontSize: 18,
+                              color: Colors.grey,
                             // fontWeight: FontWeight.w00,
                           ),),
                         ),
@@ -141,6 +148,7 @@ class Sales extends StatelessWidget {
                           },
                           child: Text("Customers",style: TextStyle(
                             fontSize: 18,
+                            color: Colors.grey,
                             // fontWeight: FontWeight.w700,
                           ),),
                         ),
@@ -181,6 +189,7 @@ class Sales extends StatelessWidget {
                             },
                             child: Text("Orders to Invoice",style: TextStyle(
                               fontSize: 18,
+                              color: Colors.grey,
                               // fontWeight: FontWeight.w400,
                             ),),
                           ),
@@ -190,6 +199,7 @@ class Sales extends StatelessWidget {
                             },
                             child: Text("Orders to Upsell",style: TextStyle(
                               fontSize: 18,
+                              color: Colors.grey,
                               // fontWeight: FontWeight.w00,
                             ),),
                           ),
@@ -232,6 +242,7 @@ class Sales extends StatelessWidget {
                             },
                             child: Text("Products",style: TextStyle(
                               fontSize: 18,
+                              color: Colors.grey,
                               // fontWeight: FontWeight.w400,
                             ),),
                           ),
@@ -241,6 +252,7 @@ class Sales extends StatelessWidget {
                             },
                             child: Text("Product Variants",style: TextStyle(
                               fontSize: 18,
+                              color: Colors.grey,
                               // fontWeight: FontWeight.w00,
                             ),),
                           ),
@@ -250,6 +262,7 @@ class Sales extends StatelessWidget {
                             },
                             child: Text("Pricelists",style: TextStyle(
                               fontSize: 18,
+                              color: Colors.grey,
                               // fontWeight: FontWeight.w700,
                             ),),
                           ),

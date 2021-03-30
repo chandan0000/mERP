@@ -43,28 +43,40 @@ class quit extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.only(left: 10),
                     child: Image.asset(
-                      'images/stock.png',
+                      'images/submit.png',
                       width: 80,
                       height: 73,
                     ),
                   ),
                   Column(
                     children: <Widget>[
-                      Container(
-                          padding: EdgeInsets.only(right:193),
-                          child: Text('Marc Demo')),
+                      Padding(
+                        padding: const EdgeInsets.only(top:8.0),
+                        child: Container(
+                            padding: EdgeInsets.only(right:193),
+                            child: Text('Marc Demo',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
                       Row(
                         children: [
-                          Text('https://demo.merpapp.com'),
-                          Container(
-                            padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                            // padding: EdgeInsets.all(20.0),
-                            child: IconButton(
-                              icon: Icon(Icons.arrow_drop_down_sharp,size:28.0,),
-                              onPressed: (){},
-                              //start,
-                            ),
+                          Padding(
+                            padding: const EdgeInsets.only(top:8.0),
+                            child: Text('https://demo.merpapp.com',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),),
                           ),
+                          // Container(
+                          //   padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                          //   // padding: EdgeInsets.all(20.0),
+                          //   child: IconButton(
+                          //     icon: Icon(Icons.arrow_drop_down_sharp,size:28.0,),
+                          //     onPressed: setting,
+                          //   ),
+                          // ),
                         ],
                       ),
                     ],
@@ -72,7 +84,7 @@ class quit extends StatelessWidget {
                 ],
               ),
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.indigo[600],
               ),
             ),
 
@@ -84,12 +96,12 @@ class quit extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.only(top: 19),
-                      child: Image.asset(
-                        'images/profit.png',
-                        width: 30,
-                        height: 20,
-                      ),
+                      padding: const EdgeInsets.only(top: 29),
+                      // child: Image.asset(
+                      //   'images/profit.png',
+                      //   width: 30,
+                      //   height: 20,
+                      // ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 10,top: 29),
@@ -110,11 +122,11 @@ class quit extends StatelessWidget {
                 },
                 child: Row(
                   children: <Widget>[
-                    Image.asset(
-                      'images/payment.png',
-                      width: 30,
-                      height: 20,
-                    ),
+                    // Image.asset(
+                    //   'images/payment.png',
+                    //   width: 30,
+                    //   height: 20,
+                    // ),
                     Container(
                         padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
                         child: Text('Purchase')),
@@ -133,11 +145,11 @@ class quit extends StatelessWidget {
                 },
                 child: Row(
                   children: <Widget>[
-                    Image.asset(
-                      'images/stock.png',
-                      width: 30,
-                      height: 20,
-                    ),
+                    // Image.asset(
+                    //   'images/stock.png',
+                    //   width: 30,
+                    //   height: 20,
+                    // ),
                     Container(
                         padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
                         child: Text('Inventory')),
@@ -156,11 +168,11 @@ class quit extends StatelessWidget {
                 },
                 child: Row(
                   children: <Widget>[
-                    Image.asset(
-                      'images/manufacture.png',
-                      width: 30,
-                      height: 20,
-                    ),
+                    // Image.asset(
+                    //   'images/manufacture.png',
+                    //   width: 30,
+                    //   height: 20,
+                    // ),
                     Container(
                         padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
                         child: Text('Manufacturing')),
@@ -179,11 +191,11 @@ class quit extends StatelessWidget {
                 },
                 child: Row(
                   children: <Widget>[
-                    Image.asset(
-                      'images/payment.png',
-                      width: 30,
-                      height: 20,
-                    ),
+                    // Image.asset(
+                    //   'images/payment.png',
+                    //   width: 30,
+                    //   height: 20,
+                    // ),
                     Container(
                         padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
                         child: Text('Invoicing')),
@@ -202,132 +214,98 @@ class quit extends StatelessWidget {
             ),
 
             ListTile(
-              title: Row(
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.select_all_sharp,size:26.0,),
-                    onPressed: (){},
-                    //start,
-                  ),
-                  Container(
-                      padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
-                      child: Text('Preferences')),
-                ],
+              leading: IconButton(
+                icon: Icon(Icons.select_all_sharp, size: 26.0,),
+                onPressed: (){},
+                highlightColor:Colors.orange,
+                splashColor: Colors.blue,
               ),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
+              title: Text('Preferences'),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: (){},
+              hoverColor:Colors.orange,
             ),
             ListTile(
-              title: Row(
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.feedback_outlined,size:26.0,),
-                    onPressed: (){},
-                    //start,
-                  ),
+              leading: IconButton(
+                icon: Icon(Icons.feedback_outlined,size:26.0,),
+                onPressed: (){},
+                //start,
+                highlightColor:Colors.orange,
+                splashColor: Colors.blue,
+              ),
+              title: Text('Feedback'),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: (){},
+              hoverColor:Colors.orange,
+            ),
+            ListTile(
+              leading: IconButton(
+                icon: Icon(Icons.add_box_outlined,size:26.0,),
+                onPressed: (){},
+                //start,
+                highlightColor:Colors.orange,
+                splashColor: Colors.blue,
+              ),
+              title: Text('About'),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: (){},
+              hoverColor:Colors.orange,
+            ),
+            ListTile(
+              leading: IconButton(
+                icon: Icon(Icons.account_circle,size:26.0,),
+                onPressed: (){},
+                //start,
+                highlightColor:Colors.orange,
+                splashColor: Colors.blue,
+              ),
+              title: Text('Switch User'),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: (){},
+              hoverColor:Colors.orange,
+            ),
+            ListTile(
+              leading: IconButton(
+                icon: Icon(Icons.subscriptions,size:26.0,),
+                onPressed: (){},
+                //start,
+                highlightColor:Colors.orange,
+                splashColor: Colors.blue,
+              ),
+              title: Text('Subscriptions'),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: (){},
+              hoverColor:Colors.orange,
+            ),
+            ListTile(
+              leading:  IconButton(
+                icon: Icon(Icons.settings,size:26.0,),
+                onPressed: (){},
 
-                  Container(
-                      padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
-                      child: Text('Feedback')),
-                ],
+                //start,
+                highlightColor:Colors.orange,
+                splashColor: Colors.blue,
               ),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
+              title: Text('Settings'),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: (){},
+              hoverColor:Colors.orange,
             ),
             ListTile(
-              title: Row(
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.add_box_outlined,size:26.0,),
-                    onPressed: (){},
-                    //start,
-                  ),
-                  Container(
-                      padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
-                      child: Text('About')),
-                ],
+              leading: IconButton(
+                icon: Icon(Icons.logout,size:26.0,),
+                onPressed: (){},
+
+                //start,
+                highlightColor:Colors.orange,
+                splashColor: Colors.blue,
               ),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
+              title: Text('Logout'),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: (){},
+              hoverColor:Colors.orange,
             ),
-            ListTile(
-              title: Row(
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.account_circle,size:26.0,),
-                    onPressed: (){},
-                    //start,
-                  ),
-                  Container(
-                      padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
-                      child: Text('Switch User')),
-                ],
-              ),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: Row(
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.subscriptions,size:26.0,),
-                    onPressed: (){},
-                    //start,
-                  ),
-                  Container(
-                      padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
-                      child: Text('Subscriptions')),
-                ],
-              ),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: Row(
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.settings,size:26.0,),
-                    onPressed: (){},
-                    //start,
-                  ),
-                  Container(
-                      padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
-                      child: Text('Settings')),
-                ],
-              ),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: Row(
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.logout,size:26.0,),
-                    onPressed: (){},
-                    //start,
-                  ),
-                  Container(
-                      padding: EdgeInsets.fromLTRB(10, 19, 0, 10),
-                      child: Text('Logout')),
-                ],
-              ),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
+
           ],
         ),
       ),
@@ -418,7 +396,59 @@ class quit extends StatelessWidget {
                             child: IconButton(
                               color: Colors.grey,
                               icon: Icon(Icons.more_vert,size:30.0,),
-                              onPressed: (){},
+                              onPressed: (){
+                                return showDialog(
+                                  context: context,
+                                  builder: (ctx) => AlertDialog(
+                                    title: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                                        children: [
+                                          FlatButton(
+                                            onPressed: (){
+                                              // Navigator.of(context).push(MaterialPageRoute(builder: (_) => drop()));
+                                            },
+                                            child: Text("Print",style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),),
+                                          ),
+                                          FlatButton(
+                                            onPressed: (){
+                                              // Navigator.of(context).push(MaterialPageRoute(builder: (_) => drop()));
+                                            },
+                                            child: Text("More",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Colors.black,
+                                              ),),
+                                          ),
+                                          FlatButton(
+                                            onPressed: (){
+                                              // Navigator.of(context).push(MaterialPageRoute(builder: (_) => drop()));
+                                            },
+                                            child: Text("Attachment(s)",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Colors.black,
+                                              ),),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    // content: Text("You have raised a Alert Dialog Box"),
+                                    actions: <Widget>[
+                                      // FlatButton(
+                                      //   onPressed: () {
+                                      //     Navigator.of(ctx).pop();
+                                      //   },
+                                      //   child: Text("okay"),
+                                      // ),
+                                    ],
+                                  ),
+                                );
+                              },
                             ),
                           ),
                         ],
@@ -796,12 +826,6 @@ class quit extends StatelessWidget {
                     ),
 
 
-
-
-
-
-
-
                   ]),
               // elevation: 8,
               margin: EdgeInsets.all(7),
@@ -1006,21 +1030,11 @@ class quit extends StatelessWidget {
                       ),
                     ),
 
-
-
-
-
-
-
-
                   ]),
               // elevation: 8,
               margin: EdgeInsets.all(7),
             ),
           ),
-
-
-
 
         ],
       ),

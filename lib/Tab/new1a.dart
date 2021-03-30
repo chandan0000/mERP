@@ -8,9 +8,12 @@ import 'TRf.dart';
 
 
 
-class page extends StatelessWidget {
+class Tff1a extends StatelessWidget {
 
   List<Widget> containers = [
+
+    View(),
+
     View(),
 
     REf(),
@@ -36,7 +39,7 @@ class page extends StatelessWidget {
                   // start,
                 ),
                 IconButton(
-                  icon: Icon(Icons.search,size:25.0,),
+                  icon: Icon(Icons.add,size:25.0,),
 
                   onPressed:() {},
                   // start,
@@ -77,9 +80,9 @@ class page extends StatelessWidget {
                                 color: Colors.black,
                               ),),
                               Text("More", style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                ),),
+                                fontSize: 16,
+                                color: Colors.black,
+                              ),),
                               Text("Attachment(s)", style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black,
@@ -104,6 +107,7 @@ class page extends StatelessWidget {
               ],
             ),
           ],
+
           bottom: TabBar(
             tabs: <Widget>[
 
@@ -124,6 +128,7 @@ class page extends StatelessWidget {
           ),
 
         ),
+
 
         drawer: Drawer(
           child: ListView(
@@ -232,7 +237,6 @@ class page extends StatelessWidget {
                 },
               ),
               ListTile(
-                // ignore: deprecated_member_use
                 title: FlatButton(
                   onPressed: (){
                     // Navigator.of(context).push(MaterialPageRoute(builder: (_) => Invent()));
@@ -404,9 +408,38 @@ class page extends StatelessWidget {
           ),
         ),
 
-        body: TabBarView(
-          children: containers,
+        body: ListView(
+          children: [
+
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Delivery',
+                  ),
+                ),
+              ),
+            ),
+
+
+            Container(),
+            Container(),
+            Container(),
+            Container(),
+            Container(),
+            Container(),
+            Container(),
+            Container(),
+            Container(),
+            Container(),
+            Container(),
+
+          ],
         ),
+
       ),
     );
   }
